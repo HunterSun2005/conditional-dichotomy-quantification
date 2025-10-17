@@ -1,3 +1,32 @@
+Official implementation of ACL 2025 oral paper: "Conditional Dichotomy Quantification via Geometric Embedding"
+
+```bash
+@inproceedings{cui-etal-2025-conditional,
+    title = "Conditional Dichotomy Quantification via Geometric Embedding",
+    author = "Cui, Shaobo  and
+      Liu, Wenqing  and
+      Feng, Yiyang  and
+      Zhou, Jiawei  and
+      Faltings, Boi",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.383/",
+    doi = "10.18653/v1/2025.acl-long.383",
+    pages = "7765--7791",
+    ISBN = "979-8-89176-251-0"
+}
+```
+
+
+
+
 # Dichotomous Score
 *A lightweight toolkit for measuring how “opposite” two texts are when they share the same context.*
 
