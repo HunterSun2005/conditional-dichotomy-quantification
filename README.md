@@ -1,4 +1,4 @@
-Official implementation of ACL 2025 oral paper: "Conditional Dichotomy Quantification via Geometric Embedding"
+# Official implementation of ACL 2025 oral paper: "Conditional Dichotomy Quantification via Geometric Embedding"
 
 ```bash
 @inproceedings{cui-etal-2025-conditional,
