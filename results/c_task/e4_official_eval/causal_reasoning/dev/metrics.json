@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E4_official_doge_eval_causal_dev",
+  "scenario": "causal_reasoning",
+  "split": "dev",
+  "model": "hf_cache\\official\\opposite-score-causal-reasoning-bert",
+  "sample_size": 17944,
+  "batch_size": 128,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "D:\\nlp\\conditional-dichotomy-quantification\\data\\causal_reasoning\\deltaCausal_dev_processed_gpt-4o.jsonl",
+  "cache_dir": "D:\\nlp\\conditional-dichotomy-quantification\\hf_cache",
+  "metrics": {
+    "DCF": 0.6977262594739189,
+    "DCF-positive": 0.8719906375390103,
+    "DCF-negative": 0.7771399910833705,
+    "pos_neg_degree": 0.23955675959587097,
+    "pos_neutral_degree": 0.09077659994363785,
+    "neg_neutral_degree": 0.15616102516651154
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": "True",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpu_memory_gb": "15.9"
+  }
+}

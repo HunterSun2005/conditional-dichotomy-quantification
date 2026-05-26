@@ -1,0 +1,3 @@
+﻿label,dataset,split,train_size,eval_size,pooling,loss_profile,DCF,DCF_percent,DCF_positive,DCF_positive_percent,DCF_negative,DCF_negative_percent,pos_neg_degree,checkpoint
+E5 train500 eval500,causal_reasoning,dev,500.0,500,cls,original_doge,0.33,33.0,0.582,58.2,0.472,47.2,1.3568401300290134e-06,D:\nlp\conditional-dichotomy-quantification\results\c_task\e5_small_train\causal_reasoning_original_doge_cls_train500_eval500_seed42\checkpoint
+E5 train1000 eval1000,causal_reasoning,dev,1000.0,1000,cls,original_doge,0.293,29.3,0.539,53.9,0.443,44.3,5.460381657940161e-07,D:\nlp\conditional-dichotomy-quantification\results\c_task\e5_small_train\causal_reasoning_original_doge_cls_train1000_eval1000_seed42\checkpoint

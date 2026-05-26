@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E4_local_doge_eval_causal_dev_fixed",
+  "scenario": "causal_reasoning",
+  "split": "dev",
+  "model": "results\\c_task\\e5_small_train\\causal_reasoning_original_doge_cls_train500_eval500_seed42\\checkpoint",
+  "sample_size": 17944,
+  "batch_size": 128,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "D:\\nlp\\conditional-dichotomy-quantification\\data\\causal_reasoning\\deltaCausal_dev_processed_gpt-4o.jsonl",
+  "cache_dir": "D:\\nlp\\conditional-dichotomy-quantification\\hf_cache",
+  "metrics": {
+    "DCF": 0.3114690147124387,
+    "DCF-positive": 0.5545028979045921,
+    "DCF-negative": 0.4807177886758805,
+    "pos_neg_degree": 1.2659875210374594e-06,
+    "pos_neutral_degree": 1.4005663615535013e-06,
+    "neg_neutral_degree": 1.596812580828555e-06
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": "True",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpu_memory_gb": "15.9"
+  }
+}

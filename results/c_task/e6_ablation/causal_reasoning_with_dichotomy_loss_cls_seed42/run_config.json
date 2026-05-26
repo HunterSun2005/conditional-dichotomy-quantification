@@ -1,0 +1,40 @@
+{
+  "args": {
+    "scenario": "causal_reasoning",
+    "train_split": "train",
+    "eval_split": "dev",
+    "model": "google-bert/bert-base-uncased",
+    "cache_dir": null,
+    "output_root": "D:\\nlp\\conditional-dichotomy-quantification\\results\\c_task\\e6_ablation",
+    "registry": "D:\\nlp\\conditional-dichotomy-quantification\\results\\c_task\\experiment_registry.csv",
+    "train_size": 500,
+    "eval_size": 500,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 4,
+    "epochs": 1.0,
+    "learning_rate": 2e-05,
+    "max_length": 128,
+    "pooling_strategy": "cls",
+    "loss_profile": "with_dichotomy_loss",
+    "fp16": false,
+    "seed": 42,
+    "owner": "C",
+    "experiment_name": "E6_ablation"
+  },
+  "scenario": "causal_reasoning",
+  "train_path": "D:\\nlp\\conditional-dichotomy-quantification\\data\\causal_reasoning\\deltaCausal_train_selected_from_A_B.jsonl",
+  "eval_path": "D:\\nlp\\conditional-dichotomy-quantification\\data\\causal_reasoning\\deltaCausal_dev_processed_gpt-4o.jsonl",
+  "loss_kwargs": {
+    "cosine_w": 1.0,
+    "ibn_w": 20.0,
+    "angle_w": 1.0,
+    "dichotomy_w": 1.0,
+    "dichotomy_contrastive_w": 1.0,
+    "cosine_tau": 20.0,
+    "ibn_tau": 20.0,
+    "angle_tau": 20.0,
+    "dichotomy_tau": 20.0,
+    "dichotomy_contrastive_tau": 1.0
+  },
+  "cache_dir": "D:\\nlp\\conditional-dichotomy-quantification\\hf_cache"
+}

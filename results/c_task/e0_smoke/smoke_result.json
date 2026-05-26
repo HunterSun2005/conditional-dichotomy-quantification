@@ -1,0 +1,26 @@
+{
+  "platform": "Windows-10-10.0.22631-SP0",
+  "python": "3.10.20",
+  "cache_dir": "D:\\nlp\\conditional-dichotomy-quantification\\hf_cache",
+  "data_path": "D:\\nlp\\conditional-dichotomy-quantification\\data\\causal_reasoning\\deltaCausal_dev_processed_gpt-4o.jsonl",
+  "sample_size": 10,
+  "batch_input_shape": [
+    6,
+    128
+  ],
+  "metrics": {
+    "DCF": 0.1,
+    "DCF-positive": 0.3,
+    "DCF-negative": 0.1,
+    "pos_neg_degree": 0.0,
+    "pos_neutral_degree": 0.0,
+    "neg_neutral_degree": 0.0
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": "True",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpu_memory_gb": "15.9"
+  }
+}

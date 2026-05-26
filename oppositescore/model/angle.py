@@ -20,7 +20,10 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import bitsandbytes as bnb
+try:
+    import bitsandbytes as bnb
+except ImportError:
+    bnb = None
 from datasets import Dataset
 from transformers import (
     AutoModelForCausalLM, AutoModel, AutoTokenizer,
@@ -1184,6 +1187,11 @@ class AnglE(AngleBase):
 
                 is_kbit = load_kbit in [4, 8]
                 if is_kbit:
+                    if bnb is None:
+                        raise ImportError(
+                            "bitsandbytes is required for 4/8-bit LLM loading. "
+                            "Install it or use a non-quantized/non-LLM model."
+                        )
                     model = MODEL_CLASS.from_pretrained(
                         model_name_or_path,
                         config=None,
@@ -1220,6 +1228,8 @@ class AnglE(AngleBase):
                     )
                 elif train_mode:
                     if 'target_modules' not in lora_config or lora_config.get('target_modules', None) is None:
+                        if load_kbit == 4 and bnb is None:
+                            raise ImportError("bitsandbytes is required to discover Linear4bit modules.")
                         target_modules = find_all_linear_names(
                             model, linear_type=bnb.nn.Linear4bit if load_kbit == 4 else nn.Linear)
                         lora_config['target_modules'] = target_modules

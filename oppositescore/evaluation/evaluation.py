@@ -9,7 +9,7 @@
 
 # -*- coding: utf-8 -*-
 
-from typing import List
+from typing import List, Optional
 import numpy as np
 from boltons.iterutils import chunked_iter
 from tqdm import tqdm
@@ -26,7 +26,8 @@ class DichotomyEvaluator(object):
         positive: List[str],
         negative: List[str],
         neutral: List[str],
-        batch_size: int = 32
+        batch_size: int = 32,
+        angles_output_path: Optional[str] = 'angles_data.csv'
     ):
         assert len(context) == len(positive) == len(negative) == len(neutral), \
             "context, positive, negative, and neutral must have the same length"
@@ -35,6 +36,7 @@ class DichotomyEvaluator(object):
         self.negative = negative
         self.neutral = neutral
         self.batch_size = batch_size
+        self.angles_output_path = angles_output_path
 
     def __call__(self, model: AngleBase, show_progress: bool = True, **kwargs) -> dict:
         """ Evaluate the model on the given dataset using DCF.
@@ -84,7 +86,8 @@ class DichotomyEvaluator(object):
             'angles_pos_neg': angles_pos_neg,
             'angles_neg_neutral': angles_neg_neutral
         })
-        angles_df.to_csv('angles_data.csv', index=False)
+        if self.angles_output_path:
+            angles_df.to_csv(self.angles_output_path, index=False)
         dcf_count = 0
         dcf_positive_count = 0
         dcf_negative_count = 0

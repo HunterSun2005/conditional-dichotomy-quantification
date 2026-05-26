@@ -241,4 +241,6 @@ class DichotomyLoss:
 
         else:
             raise NotImplementedError
+        if isinstance(loss, float):
+            loss = outputs.sum() * 0.0
         return loss

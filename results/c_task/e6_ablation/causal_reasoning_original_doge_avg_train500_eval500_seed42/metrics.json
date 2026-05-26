@@ -1,0 +1,17 @@
+{
+  "metrics": {
+    "DCF": 0.256,
+    "DCF-positive": 0.564,
+    "DCF-negative": 0.416,
+    "pos_neg_degree": 1.2276411325728986e-05,
+    "pos_neutral_degree": 1.1220574378967285e-05,
+    "neg_neutral_degree": 1.3481855603458825e-05
+  },
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cuda_available": "True",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "gpu_memory_gb": "15.9"
+  }
+}

@@ -1,0 +1,12 @@
+hf_cache/
+opposite_score.egg-info/
+__pycache__/
+*.py[cod]
+
+# Local model artifacts. Keep checkpoints outside Git or publish them via
+# Git LFS / release assets if needed.
+results/c_task/**/checkpoint/
+*.safetensors
+*.pt
+*.pth
+training_args.bin

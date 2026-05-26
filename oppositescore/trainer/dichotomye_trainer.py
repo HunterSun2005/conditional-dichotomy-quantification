@@ -83,7 +83,7 @@ class DichotomyTrainer(Trainer):
         return loss
 
     # Rewrite the compute_loss for training dichotomy embedding.
-    def compute_loss(self, model, inputs, return_outputs=False):
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         """ Compute loss for AnglE.
 
         :param model: Huggingface model.
@@ -112,7 +112,5 @@ class DichotomyTrainer(Trainer):
         else:
             outputs = self.pooler(inputs)
             loss = self.loss_fct(labels, outputs)
-        # print("#" * 20, labels)
-        loss.requires_grad = True
         return (loss, outputs) if return_outputs else loss
 

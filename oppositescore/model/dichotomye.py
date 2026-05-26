@@ -16,7 +16,10 @@ from typing import Any, Dict, Optional, List, Union, Tuple
 
 import torch
 import torch.nn as nn
-import bitsandbytes as bnb
+try:
+    import bitsandbytes as bnb
+except ImportError:
+    bnb = None
 from datasets import Dataset
 from peft.tuners.lora import LoraLayer
 from transformers import (
@@ -178,6 +181,11 @@ class DichotomyE(AngleBase):
 
                 is_kbit = load_kbit in [4, 8]
                 if is_kbit:
+                    if bnb is None:
+                        raise ImportError(
+                            "bitsandbytes is required for 4/8-bit LLM loading. "
+                            "Install it or use a non-quantized/non-LLM model."
+                        )
                     model = MODEL_CLASS.from_pretrained(
                         model_name_or_path,
                         config=None,
@@ -217,6 +225,8 @@ class DichotomyE(AngleBase):
                     )
                 elif train_mode:
                     if 'target_modules' not in lora_config or lora_config.get('target_modules', None) is None:
+                        if load_kbit == 4 and bnb is None:
+                            raise ImportError("bitsandbytes is required to discover Linear4bit modules.")
                         target_modules = find_all_linear_names(
                             model, linear_type=bnb.nn.Linear4bit if load_kbit == 4 else nn.Linear)
                         lora_config['target_modules'] = target_modules
@@ -445,10 +455,8 @@ class DichotomyE(AngleBase):
 
         if self.gpu_count > 1:
             gradient_accumulation_steps = gradient_accumulation_steps // self.gpu_count
-        if fp16 is None and self.is_llm:
-            fp16 = True
-        else:
-            fp16 = False
+        if fp16 is None:
+            fp16 = bool(self.is_llm and self.device == 'cuda')
 
         # init argument_kwargs
         if argument_kwargs is None:

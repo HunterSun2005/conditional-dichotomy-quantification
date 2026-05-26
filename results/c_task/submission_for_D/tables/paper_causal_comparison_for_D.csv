@@ -1,0 +1,6 @@
+﻿label,source,model,dataset,split,DCF_percent,angle_percent_or_reported,comparison_note
+Paper BERT baseline,Original paper / README leaderboard,BERT,causal_reasoning,leaderboard setting,27.17,0.26,Paper baseline; not a DoGE-trained model.
+Paper Ours (BERT),Original paper / README leaderboard,Ours (BERT),causal_reasoning,leaderboard setting,67.59,20.69,Main paper BERT result; closest reference for the official BERT checkpoint.
+Paper Ours (RoBERTa),Original paper / README leaderboard,Ours (RoBERTa),causal_reasoning,leaderboard setting,76.55,5.06,Paper's strongest causal DCF row; architecture differs from this C-task BERT run.
+Our official checkpoint eval,This reproduction,official opposite-score-causal-reasoning-bert,causal_reasoning,"dev full, 17,944 samples",69.77,23.96,DCF is directly comparable to Paper Ours (BERT); angle is a local evaluator proxy from pos_neg_degree * 100.
+Our local 500-sample checkpoint,This reproduction,"BERT, 500-sample small training",causal_reasoning,"dev full, 17,944 samples",31.15,0.00013,"Undertrained small-sample control; useful as B's baseline, not as a replacement for the paper model."
