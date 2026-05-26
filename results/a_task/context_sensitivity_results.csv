@@ -1,0 +1,13 @@
+experiment,owner,dataset,split,model,checkpoint,seed,max_eval_samples,context_variant,DCF,DCF-positive,DCF-negative,pos_neg_degree,pos_neutral_degree,neg_neutral_degree
+E8_context_sensitivity_bow_proxy,A,causal_reasoning,dev,standard-library-bag-of-words-proxy,none,42,500,normal_context,0.098,0.48,0.376,0.148929,0.135509,0.149327
+E8_context_sensitivity_bow_proxy,A,causal_reasoning,dev,standard-library-bag-of-words-proxy,none,42,500,random_context,0.112,0.484,0.418,0.164826,0.147993,0.163102
+E8_context_sensitivity_bow_proxy,A,causal_reasoning,dev,standard-library-bag-of-words-proxy,none,42,500,empty_context,0.08,0.462,0.406,0.706492,0.651571,0.679365
+E8_context_sensitivity_bow_proxy,A,causal_reasoning,dev,standard-library-bag-of-words-proxy,none,42,500,weak_context,0.096,0.482,0.384,0.264154,0.241793,0.266191
+E8_context_sensitivity_bow_proxy,A,debate,dev,standard-library-bag-of-words-proxy,none,42,500,normal_context,0.352,0.824,0.484,0.41566,0.293918,0.401858
+E8_context_sensitivity_bow_proxy,A,debate,dev,standard-library-bag-of-words-proxy,none,42,500,random_context,0.326,0.822,0.462,0.419091,0.299991,0.40233
+E8_context_sensitivity_bow_proxy,A,debate,dev,standard-library-bag-of-words-proxy,none,42,500,empty_context,0.186,0.776,0.356,0.862874,0.636797,0.821588
+E8_context_sensitivity_bow_proxy,A,debate,dev,standard-library-bag-of-words-proxy,none,42,500,weak_context,0.352,0.832,0.478,0.563642,0.400199,0.537793
+E8_context_sensitivity_bow_proxy,A,defeasible_nli,dev,standard-library-bag-of-words-proxy,none,42,500,normal_context,0.214,0.542,0.558,0.107871,0.093239,0.095043
+E8_context_sensitivity_bow_proxy,A,defeasible_nli,dev,standard-library-bag-of-words-proxy,none,42,500,random_context,0.228,0.546,0.566,0.11657,0.100764,0.099326
+E8_context_sensitivity_bow_proxy,A,defeasible_nli,dev,standard-library-bag-of-words-proxy,none,42,500,empty_context,0.176,0.526,0.53,0.742519,0.631334,0.648761
+E8_context_sensitivity_bow_proxy,A,defeasible_nli,dev,standard-library-bag-of-words-proxy,none,42,500,weak_context,0.198,0.524,0.55,0.227096,0.196405,0.200283
