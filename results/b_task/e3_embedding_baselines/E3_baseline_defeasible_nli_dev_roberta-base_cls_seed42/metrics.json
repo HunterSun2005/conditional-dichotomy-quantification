@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E3_baseline_defeasible_nli_dev_roberta-base_cls_seed42",
+  "scenario": "defeasible_nli",
+  "split": "dev",
+  "model": "FacebookAI/roberta-base",
+  "sample_size": 500,
+  "batch_size": 16,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "/Users/ezekiel/code/PY_codes/ConDQ/data/defeasible_nli/dev_processed_gpt-4o.jsonl",
+  "cache_dir": "/Users/ezekiel/code/PY_codes/ConDQ/hf_cache",
+  "metrics": {
+    "DCF": 0.13,
+    "DCF-positive": 0.342,
+    "DCF-negative": 0.332,
+    "pos_neg_degree": 2.0909308773298108e-07,
+    "pos_neutral_degree": 2.8753279934790044e-07,
+    "neg_neutral_degree": 2.514123877972452e-07
+  },
+  "environment": {
+    "torch": "2.9.1",
+    "cuda": "None",
+    "cuda_available": "False",
+    "gpu": "cpu",
+    "gpu_memory_gb": ""
+  }
+}

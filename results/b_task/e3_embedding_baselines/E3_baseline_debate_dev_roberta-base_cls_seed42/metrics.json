@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E3_baseline_debate_dev_roberta-base_cls_seed42",
+  "scenario": "debate",
+  "split": "dev",
+  "model": "FacebookAI/roberta-base",
+  "sample_size": 500,
+  "batch_size": 16,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "/Users/ezekiel/code/PY_codes/ConDQ/data/debate/perspectrum_dev_processed_gpt-4o.jsonl",
+  "cache_dir": "/Users/ezekiel/code/PY_codes/ConDQ/hf_cache",
+  "metrics": {
+    "DCF": 0.452,
+    "DCF-positive": 0.68,
+    "DCF-negative": 0.666,
+    "pos_neg_degree": 2.662539372977335e-06,
+    "pos_neutral_degree": 1.9006729417014867e-06,
+    "neg_neutral_degree": 1.7468929627284524e-06
+  },
+  "environment": {
+    "torch": "2.9.1",
+    "cuda": "None",
+    "cuda_available": "False",
+    "gpu": "cpu",
+    "gpu_memory_gb": ""
+  }
+}

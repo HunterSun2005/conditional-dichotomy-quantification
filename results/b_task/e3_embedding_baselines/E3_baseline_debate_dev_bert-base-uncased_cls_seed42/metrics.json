@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E3_baseline_debate_dev_bert-base-uncased_cls_seed42",
+  "scenario": "debate",
+  "split": "dev",
+  "model": "google-bert/bert-base-uncased",
+  "sample_size": 500,
+  "batch_size": 16,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "/Users/ezekiel/code/PY_codes/ConDQ/data/debate/perspectrum_dev_processed_gpt-4o.jsonl",
+  "cache_dir": "/Users/ezekiel/code/PY_codes/ConDQ/hf_cache",
+  "metrics": {
+    "DCF": 0.318,
+    "DCF-positive": 0.554,
+    "DCF-negative": 0.572,
+    "pos_neg_degree": 0.0019078042823821306,
+    "pos_neutral_degree": 0.001754813245497644,
+    "neg_neutral_degree": 0.0016448167152702808
+  },
+  "environment": {
+    "torch": "2.9.1",
+    "cuda": "None",
+    "cuda_available": "False",
+    "gpu": "cpu",
+    "gpu_memory_gb": ""
+  }
+}

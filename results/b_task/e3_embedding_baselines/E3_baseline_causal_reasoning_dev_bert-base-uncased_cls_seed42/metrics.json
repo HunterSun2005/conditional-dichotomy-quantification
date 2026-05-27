@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E3_baseline_causal_reasoning_dev_bert-base-uncased_cls_seed42",
+  "scenario": "causal_reasoning",
+  "split": "dev",
+  "model": "google-bert/bert-base-uncased",
+  "sample_size": 500,
+  "batch_size": 16,
+  "pooling_strategy": "cls",
+  "seed": 42,
+  "data_path": "/Users/ezekiel/code/PY_codes/ConDQ/data/causal_reasoning/deltaCausal_dev_processed_gpt-4o.jsonl",
+  "cache_dir": "/Users/ezekiel/code/PY_codes/ConDQ/hf_cache",
+  "metrics": {
+    "DCF": 0.232,
+    "DCF-positive": 0.56,
+    "DCF-negative": 0.38,
+    "pos_neg_degree": 0.002553432947024703,
+    "pos_neutral_degree": 0.002321467502042651,
+    "neg_neutral_degree": 0.003104030154645443
+  },
+  "environment": {
+    "torch": "2.9.1",
+    "cuda": "None",
+    "cuda_available": "False",
+    "gpu": "cpu",
+    "gpu_memory_gb": ""
+  }
+}
